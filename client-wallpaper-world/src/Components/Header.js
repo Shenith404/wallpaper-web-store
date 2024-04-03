@@ -1,20 +1,14 @@
-import * as React from 'react';
+import styled from '@emotion/styled';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { Box, Button, Dialog, DialogActions, DialogContent, FormControl, Input, MenuItem, Select, Tooltip, Typography } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Logo from "../Images/logo.png"; // Replace with the actual image path
-import { Avatar, Box, Button, Dialog, DialogContent, Link, Tooltip,DialogActions, TextField } from '@mui/material';
-import styled from '@emotion/styled';
-import cover from '../Images/cover.jpg'
-import { CircleNotifications,Co2Sharp,ContactlessTwoTone,ElevationScroll, FlashOnRounded } from '@mui/icons-material';
-import { useState,useEffect } from 'react';
-import { FormControl,Select,MenuItem,Typography,  Input } from '@mui/material'
-import coverImg from "../Images/userwindoimg.jpg"
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import axios from 'axios';
-import LogoutIcon from '@mui/icons-material/Logout';
-import SearchIcon from '@mui/icons-material/Search';
-import { useHistory } from 'react-router-dom';
-import SearchResults from './SearchResults';
+import * as React from 'react';
+import { useEffect, useState } from 'react';
+import { default as cover, default as coverImg } from '../Images/cover.jpg';
+import Logo from "../Images/logo.png"; // Replace with the actual image path
 
 const categories = ['Games', 'Animals', 'Art', 'Cars', 'Nature','Other'];
 const DownloadButton = styled(Button)({
